@@ -1,0 +1,811 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sathyadeva Vemula - Data Analyst Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .hero-content .contact-info {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-content .contact-info a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: opacity 0.3s;
+        }
+
+        .hero-content .contact-info a:hover {
+            opacity: 0.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: #667eea;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: #667eea;
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        section:nth-child(even) {
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #333;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* Summary */
+        .summary-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-category h3 i {
+            margin-right: 10px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Experience */
+        .experience-timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+
+        .experience-item {
+            padding: 20px 40px;
+            position: relative;
+            background: inherit;
+            width: 50%;
+        }
+
+        .experience-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background: #667eea;
+            border-radius: 50%;
+            top: 25px;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px #667eea;
+        }
+
+        .experience-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .experience-item:nth-child(even)::after {
+            left: -10px;
+        }
+
+        .experience-content {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .experience-content:hover {
+            transform: translateY(-3px);
+        }
+
+        .experience-content h3 {
+            color: #667eea;
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .experience-content .company {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .experience-content .duration {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .experience-content ul {
+            margin-left: 20px;
+        }
+
+        .experience-content li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card h3 {
+            color: #333;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .project-card .project-period {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Education */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .education-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .education-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .education-card h3 {
+            color: #667eea;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .education-card .school {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .education-card .duration {
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .education-card .gpa {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        /* Certifications */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .certification-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+            border-top: 4px solid #667eea;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .certification-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .certification-card p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #667eea;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .experience-timeline::before {
+                left: 31px;
+            }
+
+            .experience-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .experience-item::after {
+                left: 22px;
+            }
+
+            .experience-item:nth-child(even) {
+                left: 0%;
+            }
+
+            .experience-item:nth-child(even)::after {
+                left: 22px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .skills-grid,
+            .projects-grid,
+            .education-grid,
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Sathyadeva Vemula</h1>
+                <p class="subtitle">Data Analyst & Business Intelligence Professional</p>
+                <div class="contact-info">
+                    <a href="tel:+19376774699"><i class="fas fa-phone"></i> +1 (937) 677-4699</a>
+                    <a href="mailto:sathyadeva.vemula@gmail.com"><i class="fas fa-envelope"></i> sathyadeva.vemula@gmail.com</a>
+                    <a href="https://linkedin.com/in/sathyadeva-vemula" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <br><br>
+                    <i class="fas fa-map-marker-alt"></i> Dayton, OH
+                </div>
+                <a href="#contact" class="cta-button">Get In Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Professional Summary -->
+    <section id="summary">
+        <div class="container">
+            <h2 class="section-title fade-in">Professional Summary</h2>
+            <div class="summary-content fade-in">
+                <p>Results-oriented <strong>Data Analyst</strong> and <strong>Business Intelligence Analyst</strong> with practical expertise in <strong>ETL operations, SQL querying, and interactive dashboard development using Power BI</strong>. Proven track record in building performant data models, creating operational analytics reports, and translating complex datasets into actionable business insights. Hands-on experience in academic analytics projects and operational reporting, with strong cross-functional collaboration and communication skills. Adept at managing multiple projects and delivering high-quality visualizations for data-driven decision-making.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title fade-in">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-chart-line"></i> Business Intelligence</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Microsoft Excel</span>
+                        <span class="skill-tag">PivotTables</span>
+                        <span class="skill-tag">Power Query</span>
+                        <span class="skill-tag">SSRS</span>
+                        <span class="skill-tag">SAS</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-database"></i> Database & Querying</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">SSMS</span>
+                        <span class="skill-tag">MySQL Workbench</span>
+                        <span class="skill-tag">Snowflake</span>
+                        <span class="skill-tag">Databricks</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-cogs"></i> ETL Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Azure Data Factory</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-cloud"></i> Cloud Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Azure DevOps</span>
+                        <span class="skill-tag">Databricks</span>
+                        <span class="skill-tag">Synapse Analytics</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-project-diagram"></i> Data Modeling & DAX</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Star-Snowflake Schema</span>
+                        <span class="skill-tag">DAX Measures</span>
+                        <span class="skill-tag">Calculated Columns</span>
+                        <span class="skill-tag">KPIs</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-chart-bar"></i> Statistical Analysis</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title fade-in">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item fade-in">
+                    <div class="experience-content">
+                        <h3>Data Analyst Intern</h3>
+                        <div class="company">FastHire Manpower Solutions, Remote</div>
+                        <div class="duration">May 2024 - Oct 2024</div>
+                        <ul>
+                            <li>Led data-driven reporting and analytics for a major Retail Industry client, focusing on Sales Performance & Inventory Optimization</li>
+                            <li>Developed and deployed a dynamic Power BI dashboard visualizing key KPIs such as regional sales performance, inventory health, product movement, and stockout metrics</li>
+                            <li>Conducted in-depth analysis contributing to a <strong>15% reduction in stockouts</strong> and improved inventory cost efficiency</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item fade-in">
+                    <div class="experience-content">
+                        <h3>Data Analyst</h3>
+                        <div class="company">Cognizant Technology Solutions, Hyderabad, India</div>
+                        <div class="duration">Jun 2021 - Jul 2022</div>
+                        <ul>
+                            <li>Developed automated ETL processes using Python and SQL that improved data accuracy and reduced manual preparation efforts by <strong>40%</strong></li>
+                            <li>Designed and developed Power BI and SSRS dashboards, supporting data preprocessing, transformation, and modeling</li>
+                            <li>Crafted and optimized complex SQL queries using SSMS for data extraction and reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Projects -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Technical Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <h3>Maven Market - Interactive Power BI Dashboard</h3>
+                    <div class="project-period">Spring 2025</div>
+                    <p>Built an interactive Power BI dashboard integrating 7 datasets and 1.5M+ transactions, achieving <strong>99% data accuracy</strong>. Designed a star-snowflake data model with 12+ relationships and 15+ DAX measures, improving query performance by <strong>40%</strong>. Analyzed <strong>$1.76M in revenue</strong>, 269K transactions, and enhanced UX to cut stakeholder discovery time by <strong>65%</strong>.</p>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>AdventureWorks Bike Shop - Power BI Dashboard</h3>
+                    <div class="project-period">Fall 2024</div>
+                    <p>Developed a comprehensive Power BI solution with automated ETL processes, reducing data preparation time by <strong>30%</strong>. Created 10+ advanced DAX measures and built drill-through dashboards that uncovered <strong>$500K+ in revenue gaps</strong>. Implemented Row-Level Security reducing unauthorized data exposure by <strong>90%</strong>.</p>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>Customer Churn Prediction - Classification</h3>
+                    <div class="project-period">Fall 2023</div>
+                    <p>Conducted customer churn analysis in the telecom industry, achieving <strong>86% model accuracy</strong> using AdaBoost and LightGBM algorithms. Performed comprehensive data preprocessing, feature engineering, and hyperparameter tuning on a dataset of 7,043 records and 21 features.</p>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>Distributed Deep Learning using Azure</h3>
+                    <div class="project-period">Fall 2023</div>
+                    <p>Collaborated in a team of four to design advanced machine learning algorithms including CNN, LSTM, and Bi-RNN. Utilized Azure Cloud's parallel programming capabilities achieving a <strong>20% increase in system performance</strong> and reduced model training times for large-scale deep learning workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title fade-in">Education</h2>
+            <div class="education-grid">
+                <div class="education-card fade-in">
+                    <h3>Master of Science - Computer Science</h3>
+                    <div class="school">Wright State University (WSU), Dayton, OH</div>
+                    <div class="duration">2022 - 2024</div>
+                    <div class="gpa">GPA: 3.5/4.0</div>
+                    <p><strong>Relevant Coursework:</strong> Algorithm Design and Analysis, Information Retrieval, Cyber Network Security, Machine Learning, Distributed Computing, Advanced Artificial Intelligence, Cryptography and Data Security</p>
+                </div>
+                <div class="education-card fade-in">
+                    <h3>Bachelor of Technology - Information Technology</h3>
+                    <div class="school">Malla Reddy College of Engineering & Technology, Hyderabad, India</div>
+                    <div class="duration">2018 - 2022</div>
+                    <div class="gpa">GPA: 3.3/4.0</div>
+                    <p><strong>Relevant Coursework:</strong> Data Warehousing and Data Mining, DBMS, Programming (C, C++, Java, Python), Data Visualization with R, Web Technologies, Machine Learning, Cloud Computing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Certifications -->
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title fade-in">Achievements & Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card fade-in">
+                    <h3>IBM Data Science Certification</h3>
+                    <p>Certified in core data science concepts including Data Science 101, machine learning, and data visualization using Python.</p>
+                </div>
+                <div class="certification-card fade-in">
+                    <h3>Coursera Machine Learning Certification</h3>
+                    <p>Mastered machine learning algorithms including supervised and unsupervised learning, deep learning, and neural networks.</p>
+                </div>
+                <div class="certification-card fade-in">
+                    <h3>Smart India Hackathon 2020 Finalist</h3>
+                    <p>Selected as finalist from 2000+ teams nationwide under the Ministry of Women and Child Development, Government of India.</p>
+                </div>
+                <div class="certification-card fade-in">
+                    <h3>Microsoft Power BI Desktop Certification</h3>
+                    <p>Certified in Power BI Desktop for Business Intelligence (Udemy, Jan 2025).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Let's Connect</h3>
+                <p>Ready to discuss data analytics opportunities and solutions</p>
+                <div class="social-links">
+                    <a href="mailto:sathyadeva.vemula@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/sathyadeva-vemula" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="tel:+19376774699"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+            <p>&copy; 2025 Sathyadeva Vemula. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fade-in animation on scroll
+        function fadeInOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize animations
+        window.addEventListener('scroll', fadeInOnScroll);
+        window.addEventListener('load', fadeInOnScroll);
+        
+        // Trigger initial fade-in
+        fadeInOnScroll();
+    </script>
+</body>
+</html>
