@@ -159,7 +159,7 @@ I specialize in:
 ## 🤝 Let’s Connect
 
 - 📧 Email: **sathyadeva.vemula@gmail.com**  
-- 💼 LinkedIn: https://www.linkedin.com/in/sathyadeva-vemula-30a2651a1/  
+- 💼 LinkedIn: https://www.linkedin.com/in/sathyadeva-vemula/  
 - 💻 GitHub: https://github.com/SathyadevaVemula  
 
 ---
