@@ -1,140 +1,167 @@
 # 👋 Hi, I’m **Sathyadeva Vemula**
+
 ![Power BI](https://img.shields.io/badge/PowerBI-EDA32D?style=flat&logo=powerbi&logoColor=black)
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat&logo=microsoftazure&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Snowflake](https://img.shields.io/badge/Snowflake-56B9EB?style=flat&logo=snowflake&logoColor=white)
 
 <p align="center">
-  <b>Data Engineering & Analytics | Power BI | Azure | Microsoft Fabric</b>
+  <b>Data Engineering | Analytics | Snowflake | Azure Databricks | Power BI | Microsoft Fabric</b>
 </p>
 
 ---
 
 ## 🚀 About Me
 
-I’m a **Data Engineering & Analytics professional with 4+ years of experience** building **enterprise-grade data pipelines, lakehouse architectures, and decision-ready BI solutions** across **Azure and Microsoft Fabric ecosystems**.
+I’m a **Data Engineer & Analytics professional with 4+ years of experience** building **scalable data platforms and decision-grade analytics systems**.
 
-I specialize in turning **complex, multi-source data** into **governed, scalable, and high-performance analytics** that leadership can trust.
+I specialize in:
+- Designing **medallion (Bronze–Silver–Gold) architectures**
+- Building **high-performance ELT pipelines at scale**
+- Delivering **governed, business-ready BI solutions**
 
-> 💡 *I focus on decision-grade analytics — not just dashboards, but data systems that improve speed, accuracy, and confidence.*
+> 💡 I don’t just build pipelines — I build **data systems businesses rely on for decisions.**
 
 ---
 
-## 🧠 Core Strengths
+## 📊 Impact Snapshot
+
+- ⚡ **40M+ records/day** processed in production pipelines  
+- 💰 **$200K+ annual cloud cost savings** via SQL profiling & warehouse optimization  
+- 🚀 **35% faster pipelines** through Spark tuning & partitioning  
+- 📉 **45% reduction in reporting turnaround time**  
+- ✅ **99%+ pipeline reliability** across enterprise workloads  
+
+---
+
+## 🧠 Core Expertise
 
 ### 🔹 Data Engineering
-- Medallion architectures (**Bronze / Silver / Gold**)
-- Metadata-driven pipelines (**ADF, Databricks, Delta Lake**)
-- Lakehouse & **OneLake-aligned** architectures
-- Scalable ingestion & transformation (**PySpark**, **Spark SQL**)
+- Medallion Architecture (**Bronze / Silver / Gold**)
+- Delta Lake, Delta Live Tables, Snowflake
+- PySpark, Spark SQL
+- Metadata-driven pipelines (ADF + Databricks)
+- Data Quality & Validation Frameworks
 
-### 🔹 Business Intelligence (Power BI)
-- Advanced **DAX** (time intelligence, rolling metrics, forecasting)
-- **Power Query (M)**, incremental refresh, performance tuning
-- Executive & KPI dashboards
-- **Row-Level Security (RLS)** & certified datasets
-- Git-backed **Dev / Test / Prod** deployment pipelines
+### 🔹 Cloud & Platforms
+- Azure: ADF, ADLS Gen2, Databricks, Synapse  
+- Snowflake: Warehousing, clustering, performance tuning  
+- Microsoft Fabric: Lakehouse, OneLake, Semantic Models  
+- Unity Catalog & governance frameworks  
 
-### 🔹 Languages & Tools
-- **SQL**, **Python** (*Pandas, NumPy, scikit-learn*)
-- **PySpark**, **Spark SQL**
-- **Azure**: ADF, Databricks, Synapse
-- **Microsoft Fabric**: Lakehouse, OneLake, Dataflows, Semantic Models
-- **Git**, **Azure DevOps**, **CI/CD**, **JIRA**
+### 🔹 Business Intelligence
+- Power BI (DAX, Power Query, semantic models)
+- Row-Level Security (RLS)
+- Incremental refresh & performance optimization  
+- Executive dashboards & KPI storytelling  
+
+### 🔹 DevOps & DataOps
+- CI/CD (Azure DevOps, GitHub Actions)
+- Git-based deployment pipelines  
+- Automated rollback & validation  
+- Data lineage & governance (Purview, Unity Catalog)  
 
 ---
 
 ## 🏢 Professional Experience
 
-### 🟦 Data Engineer — *Technopride, USA*  
+### 🟦 Data Engineer — *Morningstar*  
 **Oct 2024 – Present**
 
-- Built **metadata-driven lakehouse pipelines** processing **40M+ records/day** using **ADF, Databricks, and Delta Lake**.
-- Designed **Microsoft Fabric–aligned semantic layers** enabling centralized, governed analytics consumption.
-- Delivered **executive Power BI dashboards** for IT operations, infrastructure usage, and vendor spend — reducing reporting turnaround time by **45%**.
-- Implemented **RLS**, dataset standards, and **Git-based deployments** to ensure secure and auditable analytics delivery.
+- Built Snowflake data warehouse processing **40M+ daily records**, reducing compute costs by **20%**
+- Identified **$200K+ annual savings** via query profiling & warehouse right-sizing  
+- Designed Delta Live Tables pipelines with enforced data quality checks  
+- Implemented Unity Catalog governance (access control + lineage)  
+- Delivered **10+ Power BI dashboards**, reducing reporting time by **45%**  
+- Built CI/CD pipelines, reducing deployment errors by **35%**
 
 ---
 
-### 🟦 Data Analytics Engineer — *FastHire Manpower Solutions, USA*  
+### 🟦 Data Analytics Engineer — *US Foods*  
 **Jan 2023 – Oct 2024**
 
-- Delivered end-to-end analytics solutions from ingestion to **Power BI reporting**.
-- Built **7 enterprise dashboards** (*sales performance, inventory health, stockouts*), improving reporting efficiency by **20%**.
-- Optimized **DAX**, refresh strategies, and model performance for responsiveness at scale.
-- Enabled **Dev / Test / Prod BI workflows** using **Git version control**.
+- Built full retail analytics platform on Azure Databricks  
+- Reduced pipeline runtime by **35%** via partitioning & Spark optimization  
+- Developed dbt models standardizing transformations across domains  
+- Implemented data quality checks catching **3,000+ errors weekly**  
+- Improved inventory decisions → **15% reduction in stockouts**  
+- Consolidated **12 reports into 2 governed Power BI dashboards**
 
 ---
 
-### 🟦 Data Analyst — *Cognizant Technology Solutions, India*  
+### 🟦 Data Analyst — *Cognizant*  
 **Aug 2021 – Aug 2022**
 
-- Supported enterprise ETL pipelines using **Python and SQL** across operational and financial systems.
-- Built and enhanced **Power BI & SSRS dashboards**, improving reporting accuracy and stakeholder confidence.
-- Automated data preparation workflows, reducing manual effort by **40%**.
+- Reduced reporting cycle from **3 days → <4 hours**  
+- Built ETL pipelines (Python + SQL) across financial systems  
+- Developed Power BI & SSRS dashboards with improved accuracy  
+- Implemented QA frameworks (40+ validation checks)  
 
 ---
 
-## 📊 Featured Projects *(Pinned Repositories)*
+## 📊 Featured Projects
 
-### 🔸 **FlowSync HR — AI-Powered HR Co-Pilot**
-- Automated HR insights platform with **real-time employee pulse tracking**.
-- AI-generated team summaries, burnout detection, and productivity forecasting.
-- Reduced HR administrative effort by **65%** while improving leadership visibility.
-
-### 🔸 **Maven Market — Retail Analytics Dashboard**
-- Integrated **7 enterprise datasets (1.5M+ transactions)** with **99% data accuracy**.
-- Built optimized **star/snowflake models** with advanced **DAX** (YTD, rolling metrics).
-- Achieved **40% faster query performance** through model optimization.
-
-### 🔸 **AdventureWorks Cycles — Executive BI Dashboard**
-- Designed an end-to-end BI solution using **Power BI**.
-- Implemented **star schema**, **time intelligence**, **drill-through**, and **RLS**.
-- Delivered insights on regional performance, product trends, and customer behavior.
-
-### 🔸 **Student Enrollment Performance Dashboard**
-- Built institutional analytics for **Bismarck State College**.
-- Forecasted credit-hour growth toward a **120,000 target by 2029**.
-- Used optimized **DAX**, **CAGR forecasting**, and executive-level storytelling.
+### 🔸 FlowSync HR — AI-Powered HR Analytics
+- Real-time workforce analytics & burnout detection  
+- Automated HR insights & forecasting  
+- Reduced manual effort by **40%+**
 
 ---
 
-## 📈 What You’ll Find on My GitHub
-
-- ✅ Production-style **Power BI semantic models & DAX patterns**
-- ✅ **Data engineering pipelines** (ADF, Databricks, Delta Lake)
-- ✅ Analytics engineering & **star-schema examples**
-- ✅ Real-world dashboards with **business context**
-- ✅ Clean commits, documentation, and **scalable design**
+### 🔸 Retail Market Analytics Dashboard
+- Integrated **7 datasets (1.5M+ records)**  
+- Built star/snowflake schema with optimized DAX  
+- Achieved **40% faster query performance**
 
 ---
 
-## 🌱 Currently Leveling Up
-
-- **Microsoft Fabric** & enterprise BI governance
-- Advanced **DAX** & performance optimization
-- **CI/CD for analytics** & DataOps best practices
-- Applied **machine learning** for forecasting & anomaly detection
+### 🔸 Student Enrollment Forecasting
+- Built end-to-end DLT pipeline with schema enforcement  
+- Developed CAGR-based forecasting model  
+- Projected **120K credit hours by 2029**
 
 ---
 
-## 🤝 Let’s Collaborate
-
-I’m open to:
-- Analytics engineering & BI projects
-- Data platforms & lakehouse design
-- Open-source data tooling
-- Real-world business analytics use cases
+### 🔸 Executive Sales Dashboard (AdventureWorks)
+- Designed full Power BI solution with RLS  
+- Built 20+ DAX measures with drill-through insights  
+- Delivered executive-level performance analytics  
 
 ---
 
-## 📫 Connect With Me
+## 🧰 Tech Stack
 
-- 📧 **Email**: [sathyadeva.vemula@gmail.com](mailto:sathyadeva.vemula@gmail.com)
-- 💼 **LinkedIn**: [linkedin.com/in/sathyadevavemula](https://www.linkedin.com/in/sathyadeva-vemula-30a2651a1/)
-- 💻 **GitHub**: [github.com/SathyadevaVemula](https://github.com/SathyadevaVemula)
+**Languages:**  
+`Python` `SQL` `PySpark` `Spark SQL` `DAX`
+
+**Data Platforms:**  
+`Snowflake` `Azure Databricks` `Delta Lake` `ADLS Gen2`
+
+**Tools & Frameworks:**  
+`ADF` `dbt` `Power BI` `Microsoft Fabric`
+
+**DevOps & Governance:**  
+`Azure DevOps` `GitHub Actions` `CI/CD` `Unity Catalog` `Microsoft Purview`
+
+---
+
+## 🌱 Currently Learning
+
+- Microsoft Fabric (advanced governance & enterprise BI)  
+- Advanced DAX optimization techniques  
+- DataOps & CI/CD for analytics engineering  
+- Machine Learning for forecasting & anomaly detection  
+
+---
+
+## 🤝 Let’s Connect
+
+- 📧 Email: **sathyadeva.vemula@gmail.com**  
+- 💼 LinkedIn: https://www.linkedin.com/in/sathyadeva-vemula-30a2651a1/  
+- 💻 GitHub: https://github.com/SathyadevaVemula  
 
 ---
 
 ## ⚡ Fun Fact
 
-When I’m not building data systems, you’ll probably find me **hiking new trails or trying a new sport** — optimizing life one experiment at a time 😄
+When I’m not building data platforms, I enjoy **hiking and exploring new sports** — always optimizing something, even outside tech 😄
