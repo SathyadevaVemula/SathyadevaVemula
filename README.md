@@ -1,4 +1,6 @@
-# Hi, I'm Sathyadeva Vemula 👋
+<p align="center">
+  # Hi, I'm Sathyadeva Vemula 👋
+</p>
 
 <p align="center">
   <b>Data Engineer • Analytics Engineer • AI Automation Builder</b>
