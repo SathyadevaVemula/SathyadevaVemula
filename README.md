@@ -1,5 +1,5 @@
 <p align="center">
-  # Hi, I'm Sathyadeva Vemula 👋
+  <h2> Hi, I'm Sathyadeva Vemula 👋 </h2>
 </p>
 
 <p align="center">
